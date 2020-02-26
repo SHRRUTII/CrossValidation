@@ -58,7 +58,7 @@ output.write(str(decisiontreemodel))
 output.flush()
 output.close()
 #predicting values based on dt model
-y_pred_dt = trainingmodel.predict(X_test)
+y_pred_dt = decisiontreemodel.predict(X_test)
 #cross validation and calculating accuracy
 scores_decisiontree = cross_val_score(decisiontree_classifier, X, y, cv=5, scoring='accuracy')
 print(scores_decisiontree)
